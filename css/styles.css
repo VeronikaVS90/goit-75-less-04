@@ -1,6 +1,7 @@
 :root {
   --color-primary: #4f4f4f;
   --color-secondary: #333;
+  --color-invert: #fefefe;
 
   --color-text-action: #fefefe;
   --color-background-action: #66ac66;
@@ -9,27 +10,64 @@
   --color-heading-subtitle: #647b64;
 }
 
+::selection {
+  color: var(--color-invert);
+  background-color: var(--color-primary);
+}
+
 body {
   color: var(--color-primary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .header-link {
   color: var(--color-secondary);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+.header-link:hover {
+  text-decoration: underline;
 }
 
 .button {
   color: var(--color-text-action);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
   background-color: var(--color-background-action);
 }
 
 .hero-title {
   color: var(--color-secondary);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.33;
+
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /* text-shadow: 2px 2px 4px violet; */
 }
 
 .heading-title {
   color: var(--color-heading-title);
+  font-size: 24px;
+  line-height: 1.33;
 }
+
+/* .heading-title::first-letter {
+  font-size: 48px;
+  color: chocolate;
+} */
 
 .heading-subtitle {
   color: var(--color-heading-subtitle);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.33;
 }
